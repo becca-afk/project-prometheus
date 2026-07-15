@@ -1,0 +1,153 @@
+.home {
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.App.light .hero {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features {
+  margin-bottom: 60px;
+}
+
+.features-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.App.light .feature-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+}
+
+.App.light .stats {
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+
+.stat-item {
+  padding: 16px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

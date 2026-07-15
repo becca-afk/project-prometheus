@@ -1,0 +1,96 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(10, 14, 39, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.App.light .navbar {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand h1 {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.App.light .nav-link {
+  color: #333;
+}
+
+.nav-link:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App.light .theme-toggle {
+  background: #f0f0f0;
+  color: #333;
+  border-color: #ccc;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .navbar-links {
+    display: none;
+  }
+}

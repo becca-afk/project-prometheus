@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: prometheus-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - DEBUG=True
+    volumes:
+      - ./backend:/app/backend
+      - ./models:/app/models
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - prometheus-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: prometheus-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - prometheus-network
+
+networks:
+  prometheus-network:
+    driver: bridge

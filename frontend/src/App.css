@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.App.dark {
+  background-color: #0a0e27;
+  color: #e0e0e0;
+}
+
+.main-content {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.App.light .card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.App.light .btn-secondary {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.App.light .btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.App.light .input {
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.textarea {
+  min-height: 200px;
+  resize: vertical;
+  font-family: 'Courier New', monospace;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.results {
+  margin-top: 24px;
+}
+
+.result-item {
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #667eea;
+}
+
+.App.light .result-item {
+  background: #f9f9f9;
+  border-left: 4px solid #667eea;
+}
+
+.result-item.high {
+  border-left-color: #ef4444;
+}
+
+.result-item.medium {
+  border-left-color: #f59e0b;
+}
+
+.result-item.low {
+  border-left-color: #10b981;
+}
+
+.confidence-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.App.light .confidence-bar {
+  background: #e0e0e0;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+}
+
+.upload-zone {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.App.light .upload-zone {
+  border-color: #ccc;
+}
+
+.upload-zone:hover {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.upload-zone.dragover {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-right: 0;
+  }
+}

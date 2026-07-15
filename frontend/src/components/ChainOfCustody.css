@@ -1,0 +1,151 @@
+.custody-page {
+  padding: 40px 20px;
+}
+
+.custody-page h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+.custody-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.case-creation,
+.case-management {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.App.light .case-creation,
+.App.light .case-management {
+  background: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.case-creation h2,
+.case-management h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.case-info {
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.App.light .case-info {
+  background: #f0f0f0;
+}
+
+.case-info h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #667eea;
+}
+
+.case-info p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.add-note {
+  margin-bottom: 20px;
+}
+
+.add-note h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.case-report {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.App.light .case-report {
+  background: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.case-report h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.report-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.App.light .report-section {
+  background: #f9f9f9;
+}
+
+.report-section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #667eea;
+}
+
+.report-section p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.report-section strong {
+  color: #667eea;
+}
+
+.note-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.App.light .note-item {
+  background: #f0f0f0;
+}
+
+.note-item p {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.note-item p:first-child {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .custody-grid {
+    grid-template-columns: 1fr;
+  }
+}
